@@ -13,7 +13,7 @@ import random
 
 
 
-@api_view(['GET'])
+@api_view(['POST'])
 @permission_classes((IsAuthenticated, ))
 def Question_v(request):
 	user=request.user
@@ -69,7 +69,7 @@ def answer_v(request):
 			j.save()
 			return redirect('question')
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-@api_view(['GET'])
+@api_view(['POST'])
 @permission_classes((IsAuthenticated, ))
 def profile_v(request):
 	user=request.user
