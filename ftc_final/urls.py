@@ -14,7 +14,16 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from ftc_back.views import Question_v,answer_v,profile_v
+from django.conf.urls import include
+from rest_framework_jwt.views import obtain_jwt_token
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^question/',Question_v,name='question'),
+    url(r'^answer/',answer_v),
+    url(r'^profile/',profile_v),
+    url(r'^api-token-auth/', obtain_jwt_token),
+    url(r'^api-auth/', include('rest_framework.urls',
+                               namespace='rest_framework'))
 ]
