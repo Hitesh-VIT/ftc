@@ -13,3 +13,6 @@ admin.site.register(Teams,TeamsAdmin)
 class questions_attemptAdmin(admin.ModelAdmin):
 	pass
 admin.site.register(questions_attempt,questions_attemptAdmin)
+class CluesAdmin(admin.ModelAdmin):
+	pass
+admin.site.register(Clues,CluesAdmin)

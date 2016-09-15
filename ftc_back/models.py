@@ -18,4 +18,11 @@ class Teams(models.Model):
 class questions_attempt(models.Model):
 	Team=models.ForeignKey(Teams,unique=False,blank=True)
 	ques_id=models.ForeignKey(Question,unique=False,blank=True)
+class Clues(models.Model):
+	clue_id=models.IntegerField()
+	clue_lt=models.FloatField()
+	clue_ln=models.FloatField()
+	clue_question=models.OneToOneField(Question)
+	
+	
 
