@@ -16,3 +16,6 @@ admin.site.register(questions_attempt,questions_attemptAdmin)
 class CluesAdmin(admin.ModelAdmin):
 	pass
 admin.site.register(Clues,CluesAdmin)
+class TriesAdmin(admin.ModelAdmin):
+	pass
+admin.site.register(Tries,TriesAdmin)

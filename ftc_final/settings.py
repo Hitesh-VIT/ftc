@@ -39,7 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-	'ftc_back','rest_framework'
+	'ftc_back','rest_framework','rest_framework.authentication','rest_framework.authtoken'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -83,8 +83,10 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.SessionAuthentication',
        'rest_framework.authentication.BasicAuthentication',
-        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        #'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        #'rest_framework.authentication.TokenAuthentication'
     ),
+    # 'EXCEPTION_HANDLER':'ftc_final.ftc_back.utils.custom_exception_handler'
 }
 
 DATABASES = {
